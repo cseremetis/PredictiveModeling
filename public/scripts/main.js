@@ -8,9 +8,9 @@ requirejs.config({ // initiate the configuration
     linearRegression: '../../lib/linearRegression',
     polynomialRegression: '../../lib/polynomialRegression'
   }
-});
+  });
 
-define(
+  define(
   [
     "jquery",
     "quandl",
@@ -18,23 +18,23 @@ define(
     "custom_plotly",
     "linearRegression",
     "polynomialRegression"
-],
+  ],
 
-function(
+  function(
   jquery,
   quandl,
   plotly,
   custom_plotly,
   linearRegression,
   polynomialRegression
-) {
-	$('#query').click(function() {
-		console.log('clicked');
-		let set = $('#dataset').val();
-		let base = $('#database').val();
-		quandl.getInfo(base, set, function(response) {
-      console.log(response);
-      custom_plotly.displayRegression(response, polynomialRegression);
+  ) {
+  $('#query').click(function() {
+    console.log('clicked');
+    let set = $('#dataset').val();
+    let base = $('#database').val();
+    quandl.getInfo(base, set, function(response) {
+          console.log(response);
+          custom_plotly.displayRegression(response, polynomialRegression);
+      });
     });
-	});
 });
