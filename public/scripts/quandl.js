@@ -10,7 +10,7 @@ define(["jquery"], function(jquery) {
     collapse: "quarterly"
   };
 
-  const API_KEY = "yQK7NuEPvshM5dEE_nu5";
+  const API_KEY = MY_API_KEY;
   const HOST = "https://www.quandl.com/api/v3/datasets";
 
   return {
