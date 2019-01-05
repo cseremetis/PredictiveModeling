@@ -1,5 +1,5 @@
 /** Collects data from the Quandl API
-  * for use in letious analysis models.
+  * for use in analysis models.
  	*/
 define(["jquery"], function(jquery) {
 
